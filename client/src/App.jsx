@@ -177,7 +177,10 @@ export default function App() {
                 <span className="hidden sm:inline-flex items-center gap-1 bg-indigo-600 rounded-lg px-3 py-1.5 text-sm font-medium">
                   🔐 Admin Mode
                 </span>
-                <button onClick={() => setIsAdmin(false)} className="btn bg-indigo-600 hover:bg-indigo-500 text-white text-sm py-2">
+                <button
+                  onClick={() => { setIsAdmin(false); setPinInput(''); setPinError(''); setWelcomeError(''); setWelcomeTab('admin'); setShowWelcome(true); }}
+                  className="btn bg-indigo-600 hover:bg-indigo-500 text-white text-sm py-2"
+                >
                   Exit Admin
                 </button>
               </div>
